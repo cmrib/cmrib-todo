@@ -4,6 +4,7 @@ import { EmptyList } from "../../components/EmptyList";
 import { Container, InputContainer, AddButton, Icon, Info, InfoContainer, Created, Done, Counter, Background } from "./styles";
 import { useTheme } from "styled-components";
 import React from "react";
+import { Task } from "../../components/Task";
 
 export function Home() {
 
@@ -48,7 +49,14 @@ export function Home() {
                 </InfoContainer>
             </Info>
 
-            <EmptyList />
+            {/* <EmptyList /> */}
+
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+
         </Container>
     )
 }

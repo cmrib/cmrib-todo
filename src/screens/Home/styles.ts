@@ -30,8 +30,7 @@ export const AddButton = styled.TouchableOpacity`
 
 export const Icon = styled(Feather)`
     font-size: 22px;
-    color: ${({ theme }) => theme.colors.gray_100};
-     
+    color: ${({ theme }) => theme.colors.gray_100};     
 `;
 
 export const Info = styled.View`
