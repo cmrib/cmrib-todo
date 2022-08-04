@@ -1,9 +1,9 @@
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input"
+import { EmptyList } from "../../components/EmptyList";
 import { Container, InputContainer, AddButton, Icon, Info, InfoContainer, Created, Done, Counter, Background } from "./styles";
 import { useTheme } from "styled-components";
 import React from "react";
-import { View } from "react-native";
 
 export function Home() {
 
@@ -48,6 +48,7 @@ export function Home() {
                 </InfoContainer>
             </Info>
 
+            <EmptyList />
         </Container>
     )
 }

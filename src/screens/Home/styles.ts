@@ -38,7 +38,8 @@ export const Info = styled.View`
     margin-top: ${RFValue(32)}px;
     flex-direction: row;
     padding: 0 24px;
-    justify-content: space-between;   
+    justify-content: space-between;  
+    margin-bottom: 20px; 
 `;
 
 export const Created = styled.Text`
@@ -62,7 +63,7 @@ export const Background = styled.View`
     margin-left: 8px;
     padding: 2px 8px;
     background-color: ${({ theme }) => theme.colors.gray_400};
-    border-radius: 50%;
+    border-radius: 10px;  
 `;
 
 export const Counter = styled.Text`
