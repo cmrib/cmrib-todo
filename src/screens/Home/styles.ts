@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 import { Feather } from '@expo/vector-icons'
 import { RFValue } from 'react-native-responsive-fontsize';
 
-
 export const Container = styled.View`
     background: ${({ theme }) => theme.colors.gray_600};
     flex: 1;
@@ -70,3 +69,9 @@ export const Counter = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
     font-size: ${RFValue(14)}px;
 `;
+
+export const TaskContainer = styled.ScrollView`
+    width: 100%;
+    padding: 0 24px;
+
+`
