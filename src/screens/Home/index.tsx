@@ -26,7 +26,7 @@ export function Home() {
             title,
             done: false
         }
-        setUserTasks(oldState => [...oldState, task])
+        setUserTasks(oldState => [task, ...oldState])
         setTitle('')
     }
 
@@ -35,6 +35,27 @@ export function Home() {
             return task.id !== id
         })
         setUserTasks(filteredTasks)
+    }
+
+    function handleDone(id: string) {
+
+        let filteredTask: Tasks
+
+        userTasks.forEach((task) => {
+            if (task.id === id) {
+                task.done = !task.done
+                filteredTask = task
+            }
+        })
+
+        const newArray = userTasks.map(task => {
+            if (task.id == filteredTask.id) {
+                task = filteredTask
+            }
+            return task
+        })
+
+        setUserTasks(newArray)
     }
 
 
@@ -98,6 +119,7 @@ export function Home() {
                         title={task.title}
                         done={task.done}
                         handleDelete={deleteTask}
+                        handleDone={handleDone}
                         id={task.id}
                     />
                 })}

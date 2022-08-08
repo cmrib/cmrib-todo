@@ -73,5 +73,4 @@ export const Counter = styled.Text`
 export const TaskContainer = styled.ScrollView`
     width: 100%;
     padding: 0 24px;
-
 `

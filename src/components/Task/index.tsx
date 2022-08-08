@@ -1,25 +1,27 @@
 import { useState } from 'react'
-import { TaskBox, Title, TrashButton, Icon, CheckButton } from './styles'
+import { TaskBox, Title, TrashButton, TrashIcon, CheckButton, CheckIcon } from './styles'
 
 interface TaskProps {
     title: string;
     done: boolean;
     handleDelete: (id: string) => void;
     id: string;
+    handleDone: (id: string) => void
 }
 
-export function Task({ title, handleDelete, id }: TaskProps) {
+export function Task({ title, handleDelete, id, done, handleDone }: TaskProps) {
 
-    const [checkIcon, setCheckIcon] = useState(false)
 
     return (
         <TaskBox>
-            <CheckButton>
-                <Icon name='circle' />
+            <CheckButton onPress={() => {
+                handleDone(id)
+            }}>
+                <CheckIcon name={done ? 'x-circle' : 'circle'} />
             </CheckButton>
-            <Title>{title}</Title>
+            <Title done={done}>{title}</Title>
             <TrashButton onPress={() => handleDelete(id)}>
-                <Icon name="trash-2" />
+                <TrashIcon name="trash-2" />
             </TrashButton>
         </TaskBox>
     )

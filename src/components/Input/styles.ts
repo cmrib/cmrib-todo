@@ -11,6 +11,6 @@ export const Container = styled(TextInput)`
     background-color: ${({ theme }) => theme.colors.gray_500};
     color: ${({ theme }) => theme.colors.gray_100};   
     padding-left: 16px;
-    flex-grow: 1;
-    margin-right: 4px;    
+    margin-right: 8px;    
+    flex: 1;
 `
