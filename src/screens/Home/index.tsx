@@ -5,6 +5,7 @@ import { Container, InputContainer, AddButton, Icon, Info, InfoContainer, Create
 import { useTheme } from "styled-components";
 import React, { useState } from "react";
 import { Task } from "../../components/Task";
+import { Alert } from "react-native";
 
 interface Tasks {
     id: string;
@@ -21,6 +22,11 @@ export function Home() {
     const [title, setTitle] = useState('')
 
     function handleCreateTask() {
+        if (title === '') {
+            Alert.alert('Título vazio', 'Digite um nome para a tarefa.');
+            return
+        }
+
         const task: Tasks = {
             id: String(Date.now()),
             title,

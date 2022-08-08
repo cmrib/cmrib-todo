@@ -4,6 +4,7 @@ import { Home } from './src/screens/Home';
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
 import * as SplashScreen from 'expo-splash-screen'
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar style="light" />
       <Home />
     </ThemeProvider>
   );
